@@ -1,0 +1,1051 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ============================= this is some utility ==============================  */
+
+li {
+  list-style: none;
+}
+
+img {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: var(--para);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--para);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--para);
+}
+
+body {
+  background: var(--primary_color);
+  transition: all 0.3s;
+}
+
+/* ============================ vertical scroll part ================================= */
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2rem;
+  background-clip: content-box;
+  border: 1px solid #f1f1f1;
+}
+
+/* ============================= this is some color change part ==============================  */
+
+:root {
+  --primary_color: #fff;
+  --local_heading: #333;
+  --para: #000;
+  --icons: #000;
+  --nav_bar: #000;
+  --box_shadow: rgba(0, 0, 0, 0.3);
+  --links: #000;
+  --nav_color: #000;
+}
+
+.Dark_Mod {
+  --primary_color: #000;
+  --local_heading: #fff;
+  --para: #fff;
+  --icons: #fee500;
+  --nav_bar: #add8e6;
+  --box_shadow: rgba(255, 255, 255, 0.2);
+  --links: #fff;
+  --nav_color: #fff;
+}
+
+/* ============================ Main code start form here ================================= */
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(images/banner.png);
+  background-position: center;
+  background-size: cover;
+}
+
+/* ================== hamburger_icon ========= */
+
+#hamburger {
+  display: none;
+  cursor: pointer;
+  color: var(--para);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+}
+
+.nav_ham_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+nav .nav_links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav .nav_links li a {
+  position: relative;
+  color: #000;
+}
+
+nav .nav_links li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  transition: width 0.3s;
+}
+
+nav .nav_links li a:hover:after {
+  width: 100%;
+}
+
+.logo {
+  width: 9rem;
+}
+
+.register_btn {
+  color: #000;
+  padding: 0.8rem 1.4rem;
+  background: #fff;
+  border-radius: 2rem;
+}
+
+.container {
+  padding: 0 7%;
+}
+
+.header h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+  padding-top: 22%;
+}
+
+.search_bar {
+  background: #fff;
+  width: 70%;
+  margin: 2rem auto;
+  padding: 0.6rem 0.8rem 0.6rem 2rem;
+  border-radius: 3.2rem;
+}
+
+.search_bar form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search_bar form input {
+  display: block;
+  background: transparent;
+  border: none;
+  outline: none;
+  margin-top: 0.4rem;
+}
+
+.search_bar form button {
+  width: 3.5rem;
+  height: 3.5rem;
+  background: #ff5361;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+}
+
+.search_bar form button img {
+  width: 1rem;
+  margin-top: 0.4rem;
+}
+
+.location_input {
+  flex: 2;
+}
+
+.search_bar form label {
+  font-weight: 600;
+}
+
+/* ============================ exclusives part ================================= */
+
+.sub_title {
+  margin: 3rem 0 1.4rem;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--local_heading);
+}
+
+.exclusives {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.exclusives div {
+  position: relative;
+  border-radius: 0.5rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.exclusives div img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+.exclusives div img:hover {
+  transform: scale(1.15);
+  filter: brightness(80%);
+}
+
+.exclusives div span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.exclusives div span h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+.exclusives div span p {
+  color: #fff;
+}
+
+/* ============================ trending  part ================================= */
+
+.trending {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 2rem;
+}
+.trending div {
+  border-radius: 0.5rem;
+  width: auto;
+  overflow: hidden;
+}
+.trending div img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+.trending div img:hover {
+  transform: scale(1.15);
+  filter: brightness(80%);
+}
+
+.trending div h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.8rem;
+  position: absolute;
+  color: var(--para);
+}
+
+/* ============================ cta part ================================= */
+
+.cta {
+  margin: 7rem 0;
+  background-image: linear-gradient(to right, #3f2321, transparent),
+    url(images/banner-2.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 0.5rem;
+  padding: 5%;
+  color: #fff;
+}
+
+.cta h3 {
+  font-size: 4vw;
+  line-height: 5.3vw;
+  font-weight: 500;
+  color: #fff;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin: 0.8rem 0;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.cta_btn {
+  background: #ff5361;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: 0.5rem;
+  margin-top: 1.4rem;
+  display: inline-block;
+}
+
+/* ============================ Travelers part ================================= */
+
+.stories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 2rem;
+  margin-bottom: 1.4rem;
+}
+
+.stories div {
+  border-radius: 0.5rem;
+  width: auto;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+.stories div img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+.stories div img:hover {
+  transform: scale(1.15);
+  filter: brightness(80%);
+}
+
+.stories div p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.4rem;
+  width: 80%;
+  line-height: 2rem;
+}
+
+.start_btn {
+  background: #ff5361;
+  color: #fff;
+  width: 80%;
+  max-width: 350px;
+  display: block;
+  text-align: center;
+  margin: 4rem auto;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+}
+
+.about_msg {
+  text-align: center;
+  margin: 5.5rem 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+.about_msg h2 {
+  font-size: 1.9rem;
+  margin-bottom: 2rem;
+  color: var(--para);
+}
+
+.about_msg p {
+  line-height: 1.5rem;
+  color: var(--para);
+}
+
+.footer {
+  margin: 5rem 0 0.9rem;
+  text-align: center;
+}
+
+.footer a {
+  color: var(--icons);
+  font-size: 1.7rem;
+  margin: 0 0.8rem;
+  transition: color 0.5s;
+}
+
+.footer hr {
+  height: 1px;
+  background: #ccc;
+  border: none;
+  margin: 1.4rem 0;
+}
+
+.footer p {
+  word-spacing: 0.2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--para);
+}
+
+/* ============================ color change button ================================= */
+
+.color_change {
+  position: fixed;
+  width: 2.8rem;
+  height: 2.8rem;
+  padding: 0.5rem 0.5rem;
+  z-index: 9999;
+  top: 80%;
+  left: 1.5rem;
+  background: #ffe500;
+  border-radius: 50%;
+}
+
+.color_change img {
+  width: 100%;
+}
+
+/* ============================ Media query index.html ================================= */
+
+@media (max-width: 1200px) {
+  .color_change {
+    left: 0.5rem;
+  }
+  .trending {
+    gap: 3rem;
+  }
+
+  .search_bar {
+    display: flex;
+    width: 80%;
+    margin: 5rem auto;
+    padding: 1.2rem 0.8rem 1.2rem 2rem;
+    height: 20rem;
+  }
+}
+
+/* ====================== */
+
+@media (max-width: 992px) {
+  .trending {
+    gap: 3.5rem;
+  }
+
+  .color_change {
+    width: 2.3rem;
+    height: 2.3rem;
+    left: 0.3rem;
+  }
+
+  nav .nav_links {
+    flex-direction: column;
+    background: #fff;
+    width: 100%;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s linear;
+  }
+
+  nav .nav_links.show {
+    height: 30%;
+  }
+
+  #hamburger {
+    display: block;
+    font-size: 1.5rem;
+  }
+}
+
+/* ====================== */
+
+@media (max-width: 430px) {
+  html {
+    font-size: 15px;
+  }
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .logo {
+    width: 7rem;
+  }
+  .register_btn {
+    padding: 0.7rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  #hamburger {
+    font-size: 1.2rem;
+  }
+  .container {
+    padding: 0 5%;
+  }
+
+  .search_bar {
+    display: flex;
+    width: 80%;
+    margin: 5rem auto;
+    padding: 1.5rem 0.8rem 1.5rem 2rem;
+    height: 25rem;
+    border-radius: 5px;
+  }
+
+  .search_bar form input {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5rem;
+  }
+
+  .sidebar {
+    border: 5px double #fff;
+  }
+}
+
+/* ============================ listing css start form here ================================= */
+
+/* ================= this is a navbar css part ============ */
+
+.navbar_white {
+  background: var(--primary_color);
+  box-shadow: 0 2px 10px var(--box_shadow);
+}
+
+.navbar_white .nav_links {
+  background: var(--primary_color);
+}
+nav .nav_links li a::after {
+  background: var(--nav_bar);
+}
+.navbar_white .nav_links a {
+  color: var(--nav_color);
+}
+
+.navbar_white .register_btn {
+  background: #ff5361;
+  color: #fff;
+}
+
+/* ============================ this is hero left part ================================= */
+
+.list_container {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.left-col {
+  flex-basis: 70%;
+}
+
+.left-col p {
+  color: var(--para);
+}
+
+.right-col {
+  flex-basis: 25%;
+}
+
+.left-col h1 {
+  color: var(--para);
+  margin-bottom: 2rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.house {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  border-top: 1px solid #ccc;
+}
+
+.house-img {
+  flex-basis: 40%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.house-info {
+  flex-basis: 58%;
+  color: #555;
+}
+
+.house-img img {
+  width: 100%;
+  transition: all 0.5s linear;
+}
+
+.house-img img:hover {
+  transform: scale(1.2);
+}
+
+.house-info h3 {
+  font-weight: 600;
+  color: var(--para);
+  font-size: 1.3rem;
+  margin: 0.4rem 0;
+}
+
+.house-info p {
+  font-size: 1rem;
+  color: var(--para);
+}
+
+.house-info i {
+  color: #ff5361;
+  font-size: 1.2rem;
+  margin: 0.8rem 0.1rem;
+  cursor: pointer;
+}
+
+.house_price {
+  text-align: right;
+}
+
+.house_price h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 0.4rem;
+  color: var(--para);
+}
+
+.house_price h4 span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--para);
+}
+
+/* ============================ this is hero right part ================================= */
+
+.sidebar {
+  box-shadow: 0px 0px 0.5rem var(--box_shadow);
+  padding: 1.4rem 2rem;
+  margin-top: 2rem;
+}
+
+.sidebar h2 {
+  font-weight: 500;
+  color: var(--para);
+}
+
+.sidebar h3 {
+  font-weight: 500;
+  margin: 1.4rem 0 0.8rem;
+  font-size: 1.2rem;
+  color: var(--para);
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  color: var(--para);
+  margin-bottom: 0.8rem;
+  gap: 0.7rem;
+}
+
+.filter p {
+  flex: 1;
+}
+
+.filter input {
+  cursor: pointer;
+}
+
+.sidebar_link {
+  text-align: right;
+  margin: 1.4rem 0;
+}
+.sidebar_link a {
+  color: var(--para);
+}
+
+/* ============================ this is pagination effect ================================= */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2.8rem 0;
+}
+
+.pagination img {
+  width: 1rem;
+}
+
+.pagination span {
+  color: var(--para);
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.5s linear;
+}
+
+.pagination span:hover {
+  background: var(--para);
+  color: var(--primary_color);
+}
+
+.pagination .right_arrow {
+  transform: rotateZ(180deg);
+}
+
+.pagination .current {
+  background: var(--para);
+  color: var(--primary_color);
+}
+
+/* ============================ Media query listing.html ================================= */
+
+/* ====================== */
+@media (max-width: 1200px) {
+  .right-col {
+    flex-basis: 70%;
+  }
+}
+
+/* ====================== */
+@media (max-width: 992px) {
+  .right-col {
+    flex-basis: 100%;
+  }
+  .left-col {
+    flex-basis: 100%;
+  }
+}
+
+/* ====================== */
+@media (max-width: 576px) {
+  .left-col {
+    flex-basis: 100%;
+  }
+
+  .right-col {
+    flex-basis: 100%;
+  }
+
+  .house {
+    gap: 1.7rem;
+  }
+
+  .house-img {
+    flex-basis: 100%;
+  }
+
+  .house-info {
+    flex-basis: 100%;
+  }
+
+  .pagination span {
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+  }
+}
+
+/* ============================ this is house.html part ================================= */
+
+.house_details {
+  padding: 0 12%;
+}
+
+.house_title {
+  margin-top: 3rem;
+}
+
+.house_title h1 {
+  font-weight: 600;
+}
+
+.house_title .row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.house_title span {
+  margin: 0 1.4rem;
+}
+
+.house_title i {
+  color: #ff5361;
+  font-size: 1rem;
+}
+
+.gallery {
+  display: grid;
+  grid-gap: 0.8rem;
+  grid-template-areas: "first first . ." "first first . .";
+  margin: 1.4rem 0;
+}
+
+.gallery div {
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.gallery div img {
+  width: 100%;
+  display: block;
+  transition: all 0.5s linear;
+}
+
+.gallery div img:hover {
+  transform: scale(1.2);
+}
+
+.gallery_img_1 {
+  grid-area: first;
+  margin-bottom: 0.6rem;
+}
+
+.small_details h2 {
+  font-weight: 500;
+  color: var(--para);
+}
+.small_details h2 {
+  font-weight: 500;
+  color: var(--para);
+}
+
+.small_details p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.small_details h4 {
+  text-align: right;
+  font-size: 1.2rem;
+  color: var(--para);
+  font-weight: 500;
+}
+
+.line {
+  border: none;
+  height: 1px;
+  background: #ccc;
+  width: 100%;
+  max-width: 50rem;
+  margin: 1.4rem 0 3rem;
+}
+
+.check_form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-items: center;
+  box-shadow: 0 0 10px var(--box_shadow);
+  margin: 2rem 0;
+  padding: 1rem 3rem;
+  background: #fff;
+  border-radius: 0.6rem;
+}
+
+.check_form label {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.check_form input {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.check_form button {
+  background: #ff5361;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 1.2rem;
+  width: 22rem;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.guest_filed {
+  flex: 1;
+}
+
+.Details_list {
+  margin: 3rem 0;
+}
+
+.Details_list li {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1.4rem;
+  line-height: 1.9rem;
+  color: var(--para);
+  position: relative;
+}
+.Details_list li span {
+  display: block;
+  font-size: 1rem;
+  color: var(--para);
+}
+
+.Details_list li i {
+  position: absolute;
+  top: 0.4rem;
+  left: -2.5rem;
+  color: var(--icons);
+}
+
+.home_decs {
+  width: 100%;
+  max-width: 43rem;
+  margin-bottom: 3rem;
+  line-height: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--para);
+}
+
+.map {
+  margin: 3rem 0;
+}
+
+.map iframe {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.map h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.map b {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--para);
+}
+
+.host {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.host img {
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.host h2 {
+  margin-bottom: 0.8rem;
+}
+
+.host i {
+  color: #ff5361;
+}
+
+.Contact_host {
+  display: inline-block;
+  margin: 2.8rem 0 2.8rem 7.7rem;
+  color: var(--para);
+  padding: 1rem 3rem;
+  border: 1px solid #ff5361;
+  border-radius: 0.4rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* ============================ Media query house.html ================================= */
+
+/* ================================== */
+
+@media (max-width: 1200px) {
+  .check_form {
+    gap: 2rem;
+  }
+}
+
+/* ================================== */
+
+@media (max-width: 768px) {
+  .gallery {
+    display: grid;
+    grid-gap: 0.8rem;
+    grid-template-areas:
+      "first first"
+      "first first";
+    margin: 1.4rem 0;
+  }
+}
+
+/* ================================== */
+
+@media (max-width: 576px) {
+  .small_details h4 {
+    margin-top: 1rem;
+  }
+
+  .Details_list {
+    margin: 5rem 2rem;
+  }
+
+  .Contact_host {
+    padding: 1rem 1rem;
+    margin: 2.8rem 0 2.8rem 7rem;
+  }
+
+  .check_form input {
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    padding-bottom: 0.4rem;
+  }
+}
