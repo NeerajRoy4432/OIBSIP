@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Nitesh" />
+    <meta name="description" content="This is a Temperature Converter App " />
+    <link rel="stylesheet" href="style.css" />
+    <title>Temperature Converter</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>Temperature Converter</h1>
+        <div class="InputFides">
+          <input
+            id="temperature"
+            type="number"
+            placeholder="Enter temperature"
+          />
+          <select id="unit">
+            <option value="Celsius">Celsius</option>
+            <option value="Fahrenheit">Fahrenheit</option>
+            <option value="Kelvin">Kelvin</option>
+          </select>
+        </div>
+        <h3 id="results"></h3>
+        <button id="convert">Convert</button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

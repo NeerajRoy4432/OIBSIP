@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Baloo+Tammudu+2&family=Poppins:wght@800&family=Roboto:wght@100&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.card {
+  min-width: 200px;
+  max-width: 500px;
+  width: calc(80% - 1px);
+  background-color: #ffffff;
+  box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2);
+  border-radius: 0.9rem;
+  padding: 2rem 0rem;
+}
+
+.card #convert {
+  display: block;
+  margin: auto;
+  min-width: 200px;
+  max-width: 500px;
+  width: calc(80% - 10px);
+  border: none;
+  color: white;
+  background-color: blueviolet;
+  padding: 1rem 1.2rem;
+  border-radius: 0.9rem;
+  margin-top: 2rem;
+}
+
+.InputFides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.InputFides input,
+select {
+  padding: 1rem 1.2rem;
+  border: none;
+  border-bottom: 1px solid red;
+  outline: none;
+}
+
+#unit {
+  width: 13rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+input,
+select,
+button {
+  margin: 10px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+#results {
+  margin: 3rem 0rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* ============= media query   =================================== */
+
+@media (max-width: 375px) {
+  .InputFides input,
+  select {
+    padding: 1rem 0.5rem;
+  }
+
+  #results {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
