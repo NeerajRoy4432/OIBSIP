@@ -194,11 +194,10 @@ textarea {
 }
 
 .hero-img {
-  width: 100%;
-  border-radius: 0.6rem;
-  height: 70rem;
-  object-fit: contain;
-  cursor: pointer;
+  width: 80%;
+  border-radius: 2rem;
+  height: 80rem;
+  /* object-fit: contain; */
 }
 
 .hire-me {
